@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    box-sizing: border-box;    
+}
+@font-face {
+    font-family: 'DK';
+    src: url(fonts/Antaris_CF/Antaris_CF.otf) format('truetype');
+}
+#home {
+    background-image: url(./image/bgHome.webp);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+}
+#containerHome {  
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 100vh;
+}
+.conteudoHome {
+    width: 40%;
+}
+#IMGHOME {
+    width: 60%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#titleHome {
+    font-size: 30px; 
+    color: white;
+    padding-top: 80px;
+    font-family: "DK";
+}
+t {
+    color: #e3c19e;
+}
+#corpoTxt {
+    margin-top: 20px;
+    color:  white;
+    font-size: 15px;
+}
+y {
+    text-decoration: underline;
+}
+.conteudoHome img {
+    width: 70%;
+}
+#bntHome {
+    padding: 10px 20px;
+    height: 40px;
+    width: 60%;
+    color: white;
+    font-weight: 600;
+    margin-top: 40px;
+    background-color: #1a1a1a; /* Fundo interno */
+    border: 2px solid transparent;
+    background-image: 
+      linear-gradient(#bf1327, #4b121b), /* fundo do botão */
+      conic-gradient(from 0deg, #e19410, #fac678, #e19410); /* gradiente da borda */
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  @media(max-width: 800px){
+    
+    .conteudoHome {
+        width: 30%;
+    }
+    #IMGHOME {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    #titleHome {
+        font-size: 20px; 
+        color: white;
+        padding-top: 20px;
+        font-family: "DK";
+    }
+    t {
+        color: #e3c19e;
+    }
+    #corpoTxt {
+        margin-top: 20px;
+        color:  white;
+        font-size: 10px;
+    }
+    y {
+        text-decoration: underline;
+    }
+    #IMGHOME img {
+        width: 100%;
+    }
+    #bntHome {
+        padding: 10px 20px;
+        height: 40px;
+        width: 100%;
+        color: white;
+        font-weight: 600;
+        font-size: 10px;
+        margin-top: 10px;
+        background-color: #1a1a1a; /* Fundo interno */
+        border: 2px solid transparent;
+        background-image: 
+        linear-gradient(#bf1327, #4b121b), /* fundo do botão */
+        conic-gradient(from 0deg, #e19410, #fac678, #e19410); /* gradiente da borda */
+        background-origin: border-box;
+        background-clip: padding-box, border-box;
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
+    
+  }
+ 
