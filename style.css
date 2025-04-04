@@ -6,6 +6,10 @@
     font-family: 'DK';
     src: url(fonts/Antaris_CF/Antaris_CF.otf) format('truetype');
 }
+@font-face {
+    font-family: 'Arabc';
+    src: url(fonts/montserrat-arabic_cQLrK/Montserrat-Arabic/Montserrat-Arabic\ Black/) format('truetype');
+}
 #home {
     background-image: url(./image/bgHome.webp);
     background-position: center center;
@@ -69,20 +73,25 @@ y {
     transition: all 0.3s ease;
   }
   @media(max-width: 800px){
+    #home {
+        background-image: url(./image/bgHomeMobile.webp);
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+    }
     
     .conteudoHome {
-        width: 30%;
+        width: 80%;
+        padding-top: 200px;
     }
     #IMGHOME {
-        width: 70%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
+        display: none;
     }
     #titleHome {
         font-size: 20px; 
         color: white;
-        padding-top: 20px;
         font-family: "DK";
     }
     t {
@@ -120,3 +129,256 @@ y {
     
   }
  
+
+
+
+
+
+#secundSection {
+    width: 100%;
+    height: auto;
+    background-image: url(./image/bgSecundSection.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+.containerSecundSection {
+    padding-top: 160px;
+    width: 80%;
+    background-color: #ce11118a;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.imgContainerSecundSection {
+    background-color: #fac678;
+    width: 50%;
+    margin-bottom: 20px;
+}
+.imgContainerSecundSection img {
+    width: 70%;
+    margin-left: 15%;
+}
+.txtSecundSection {
+    width: 40%;
+    background-color: #e19410;
+
+}
+.p1{
+    padding-top: 30px;
+    font-size: 26px;
+    color: #e3c19e;
+    font-family: "DK";
+}
+.p2 {
+    font-size: 16px;
+    color: white;
+}
+#Lider{
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 100px;
+    background-color: #bf1327;
+    display: flex;
+    flex-direction: column;
+}
+#Lider img {
+    width: 40%;
+    margin-left: 30%;
+}
+M {
+    color: white;
+    font-weight: 600;
+}
+#Lider #pLider{
+    margin-top: 50px;
+    text-align: center;
+    color: #e3c19e;
+    font-size: 26px;
+} 
+
+#TxtImg {
+    width: 80%;
+    margin-left: 10%;
+    padding-top: 150px;
+    background-color: aqua;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#PTXTImg {
+    padding-top: 150px;
+    font-family: "DK";
+    font-size: 22px;
+    color: white;
+}
+T {
+    color: #e3c19e;
+}
+t {
+    text-decoration: underline;
+}
+#IMGTXT {
+    width: 50%;
+    background-color: #4b121b;
+}
+#IMGTXT img {
+    width: 70%;
+}
+
+
+
+#Magda {
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: #e19410;
+    width: 80%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+.fotoMAgda {
+    width: 20%;
+    background: linear-gradient(to top, #510c0c, #936969);
+}
+.fotoMAgda  img {
+    width: 99%;
+    box-shadow: 0px 10px 10px;
+}
+.tituloFotoMAgda {
+    margin-top: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+}
+.corpoFotoMagda {
+    color: white;
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 10px;
+}
+#Barra {
+    padding: 20px;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: linear-gradient(90deg, #bf1327, #4b121b);
+}
+#Tp1 {
+    color: white;
+    font-size: 21px;
+    font-weight: 600;
+}
+#Tp2 {
+    font-size: 13px;
+    color: white;
+}
+#BTNIMG {
+    cursor: pointer;
+}
+
+
+
+#palestra {
+    width: 100%;
+    height: 100vh;
+    background-image: url(image/bgpalestra.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#final {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    background-image: url(image/final.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#ContainerFinal {
+    width: 80%;
+    margin-left: 10%;
+    background-color: #510c0c;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#MAgdaING {
+    width: 60%;
+    background-color: #936969;
+}
+#MAgdaING img {
+     width: 100%;
+}
+#Formulario {
+    background-color: aqua;
+    width: 40%;
+    padding-top: 200px;
+}
+#Formulario #p {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 20px;
+    color: white;
+    font-family: "DK";
+    font-size: 21px;
+}
+#Formulario .Y {
+    margin-left: 10%;
+    width: 80%;
+    height: 30px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: solid 1px gold;
+}
+#DVForm {
+    width: 80%;
+    margin-left: 10%;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#DVForm input {
+    width: 45%;
+    height: 30px;
+    border-radius: 5px;
+    border: solid 1px gold;
+}
+textarea {
+    width: 80%;
+    margin-left: 10%;
+    border-radius: 5px;
+    border: solid 1px gold;
+}
+#btnForm {
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 20px;
+    border: none;
+    height: 40px;
+    color: white;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(90deg, #bf1327, #4b121b);
+
+}
+#Footer {
+    text-align: center;
+    padding: 15px;
+    color: white;
+    width: 100%;
+    height: 50px;
+    background: linear-gradient(90deg, #bf1327, #4b121b);
+}
