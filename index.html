@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>PHD | Magda Brito</title>
+    <script>
+        function Redrect() {
+            const formContainer = document.getElementById("Formulario");
+            formContainer.scrollIntoView({ behavior: "smooth" });
+        }
+</script>
+    </script>
 </head>
 <body>
     <section id="home">
@@ -25,7 +32,7 @@
                     <b><Y>Liderar não é apenas sobre gerenciar equipes</Y></b> — é sobre transformar pessoas, impulsionar resultados e criar um legado sustentável.
 
                 </p>
-                <button id="bntHome"><a href="#Formulario">Tranforme sua forma de liderar</a></button>               
+                <button onclick="Redrect()" id="bntHome">Tranforme sua forma de liderar</button>               
             </div>
             <div id="IMGHOME">
                 <img src="./image/home_web.webp" alt="Magda imagem home- palestra">
@@ -125,9 +132,8 @@
                 <p id="Tp1">Tranforme sua forma de liderar</p>
                 <p id="Tp2">Aperte o botão ao lado e dê o primeiro <br/>passo para um novo resultado</p>
             </div>
-            <a href="#Formulario">
-                <img id="BTNIMG" src="image/btn.webp" alt="btn">
-            </a>
+            <img id="BTNIMG" src="image/btn.webp" alt="btn">
+            
             
         </div>
     </section>
