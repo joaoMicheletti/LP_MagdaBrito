@@ -16,6 +16,7 @@
 }
 #home {
     background-image: url(./image/bgHome.webp);
+    backdrop-filter: blur(10px);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -40,7 +41,7 @@
     justify-content: space-around;
 }
 #titleHome {
-    font-size: 30px; 
+    font-size: 35px; 
     color: white;
     padding-top: 80px;
     font-family: "DK";
@@ -61,8 +62,9 @@ y {
 }
 #bntHome {
     padding: 10px 20px;
-    height: 40px;
+    height: 50px;
     width: 60%;
+    font-size: 15px;
     color: white;
     font-weight: 600;
     margin-top: 40px;
@@ -167,7 +169,11 @@ y {
 }
 
 .txtSecundSection {
-    width: 40%;
+    width: 20%;
+}
+#TT2 {
+    margin-left: 10%;
+    
 }
 
 .p1{
@@ -330,7 +336,7 @@ t {
     justify-content: space-between;
 }
 #MAgdaING {
-    width: 30%;
+    width: 40%;
 }
 #MAgdaING img {
      width: 100%;
@@ -350,7 +356,7 @@ t {
 #Formulario .Y {
     margin-left: 10%;
     width: 80%;
-    height: 30px;
+    height: 60px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: solid 1px gold;
@@ -366,7 +372,7 @@ t {
 }
 #DVForm input {
     width: 45%;
-    height: 30px;
+    height: 60px;
     border-radius: 5px;
     border: solid 1px gold;
     background-color: rgba(128, 128, 128, 0.212);
