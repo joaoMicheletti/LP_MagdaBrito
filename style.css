@@ -36,14 +36,18 @@
 }
 #IMGHOME {
     width: 60%;
+    aspect-ratio: 16 / 9;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
+#IMGHOME img {
+    width: 80%;
+}
 #titleHome {
     font-size: 35px; 
     color: white;
-    padding-top: 80px;
+    padding-top: 20px;
     font-family: "DK";
 }
 t {
@@ -52,7 +56,6 @@ t {
 #corpoTxt {
     margin-top: 20px;
     color:  white;
-    font-size: 22px;
 }
 y {
     text-decoration: underline;
@@ -169,7 +172,7 @@ y {
 }
 
 .txtSecundSection {
-    width: 20%;
+    width: 30%;
 }
 #TT2 {
     margin-left: 10%;
@@ -478,8 +481,8 @@ textarea {
         text-align: center;
     }
     .fotoMAgda {
-        margin-left: 25%;
-        width: 50%;
+        margin-left: 10%;
+        width: 80%;
         margin-bottom: 30px;
         background: linear-gradient(to top, #510c0c, #936969);
     }
@@ -579,7 +582,7 @@ textarea {
     }
     #DVForm input {
         width: 45%;
-        height: 30px;
+        height: 40px;
         border-radius: 5px;
         border: solid 1px gold;
     }
@@ -593,6 +596,7 @@ textarea {
         width: 80%;
         margin-left: 10%;
         margin-top: 20px;
+        margin-bottom: 150px;
         border: none;
         height: 40px;
         color: white;
