@@ -119,6 +119,11 @@
             50% { transform: scale(1.05); }
             100% { transform: scale(1); }
         }
+        @media(max-width: 800px){
+            #N{
+                display: none;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-white">
@@ -142,7 +147,7 @@
                     Transforme sua forma de liderar
                 </button>
             </div>
-            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center animate__animated animate__fadeInRight">
+            <div id="N" class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center animate__animated animate__fadeInRight">
                 <img src="./image/home_web.webp" alt="Magda imagem home- palestra" class="w-full max-w-md floating">
             </div>
         </div>
