@@ -1,177 +1,366 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>PHD | Magda Brito</title>
-    <script>
-        function Redrect() {
-            const formContainer = document.getElementById("Formulario");
-            formContainer.scrollIntoView({ behavior: "smooth" });
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+        @font-face {
+            font-family: 'DK';
+            src: url(fonts/Antaris_CF/Antaris_CF.otf) format('truetype');
         }
-</script>
-    </script>
+        
+        @font-face {
+            font-family: 'Arabc';
+            src: url(fonts/montserrat-arabic_cQLrK/Montserrat-Arabic/Montserrat-Arabic\ Black/) format('truetype');
+        }
+        
+        .gold-text {
+            color: #e3c19e;
+        }
+        
+        .underline-gold {
+            text-decoration: underline #e3c19e;
+        }
+        
+        .gradient-border-btn {
+            background-color: #1a1a1a;
+            border: 2px solid transparent;
+            background-image: linear-gradient(#bf1327, #4b121b), conic-gradient(from 0deg, #e19410, #fac678, #e19410);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+        }
+        
+        .gradient-border-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #bf1327, #4b121b);
+        }
+        
+        .foto-magda-card {
+            transition: all 0.3s ease;
+            background: linear-gradient(to top, #510c0c, #936969);
+        }
+        
+        .foto-magda-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .form-input {
+            background-color: rgba(128, 128, 128, 0.212);
+            border: 1px solid gold;
+            transition: all 0.3s ease;
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: #e19410;
+            box-shadow: 0 0 0 3px rgba(225, 148, 16, 0.2);
+        }
+        
+        #home {
+            background-image: url(./image/bgHome.webp);
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+            #home {
+                background-image: url(./image/bgHomeMobile.webp);
+            }
+        }
+        
+        #secundSection {
+            background-image: url(./image/bgSecundSection.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        #palestra {
+            background-image: url(image/bgpalestra.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+        }
+        
+        #final {
+            background-image: url(image/final.webp);
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+    </style>
 </head>
-<body>
-    <section id="home">
-        <div id="containerHome">
-            <div class="conteudoHome">
-                <p id="titleHome">
+<body class="font-sans text-white">
+    <!-- Home Section -->
+    <section id="home" class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-50 backdrop-blur-sm"></div>
+        <div class="container mx-auto px-4 py-20 md:py-0 flex flex-col md:flex-row items-center justify-between min-h-screen relative z-10">
+            <div class="w-full md:w-1/2 animate__animated animate__fadeInLeft">
+                <h1 class="text-3xl md:text-5xl font-bold mb-6 font-DK">
                     Desperte sua<br/>
-                    <b><t>LIDERANÇA</t></b> e seja<br/> 
-                    protagonista da sua vida<br/> 
+                    <span class="gold-text">LIDERANÇA</span> e seja<br/>
+                    protagonista da sua vida<br/>
                     de uma vez por todas
-                </p>
-                <p id="corpoTxt">
-                    O momento é agora para <b>desbloquear</b> seu potencial, desenvolver ferramentas de liderança e técnicas comportamentais  para construir um ambiente de confiança, engajamento e <b>resultados sólidos.</b><br/>
-                    
-
+                </h1>
+                <p class="text-sm md:text-base mb-8">
+                    O momento é agora para <b>desbloquear</b> seu potencial, desenvolver ferramentas de liderança e técnicas comportamentais para construir um ambiente de confiança, engajamento e <b>resultados sólidos.</b><br/><br/>
                     Uma experiência imersiva e repleta de estratégias eficazes e ferramentas práticas para <b>fortalecer sua liderança</b> e ampliar sua visão sobre gestão.<br/><br/>
-
-                    <b><Y>Liderar não é apenas sobre gerenciar equipes</Y></b> — é sobre transformar pessoas, impulsionar resultados e criar um legado sustentável.
-
+                    <b><span class="underline-gold">Liderar não é apenas sobre gerenciar equipes</span></b> — é sobre transformar pessoas, impulsionar resultados e criar um legado sustentável.
                 </p>
-                <button onclick="Redrect()" id="bntHome">Tranforme sua forma de liderar</button>               
+                <button onclick="scrollToForm()" class="gradient-border-btn text-white font-semibold py-3 px-8 rounded-md transition-all duration-300 hover:shadow-lg pulse">
+                    Transforme sua forma de liderar
+                </button>
             </div>
-            <div id="IMGHOME">
-                <img src="./image/home_web.webp" alt="Magda imagem home- palestra">
-            </div> 
+            <div class="w-full md:w-1/2 mt-10 md:mt-0 flex justify-center animate__animated animate__fadeInRight">
+                <img src="./image/home_web.webp" alt="Magda imagem home- palestra" class="w-full max-w-md floating">
+            </div>
         </div>
     </section>
 
-
-
-    <section id="secundSection">
-        <div class="containerSecundSection">
-            <div class="imgContainerSecundSection">
-                <img src="./image/01.webp" alt="Magda e Jonas" />
-            </div>
-            <div class="txtSecundSection">
-                <p class="p1">Diagnóstico</p>
-                <p class="p2">
-                    Comece a identificar as
-                    <br/> 
-                    falhas na comunicação, 
-                    processos, delegação, 
-                    autoridade e baixa 
-                    produtividade sua e da sua <br/>
-                    equipe através.</p>
-            </div>
-        </div>
-
-
-        <div class="containerSecundSection">
-            <div class="txtSecundSection" id="TT2">
-                <p class="p1">Acelerador</p>
-                <p class="p2" >
-                    Construa um mapa<br/> 
-                    estratégico para guiar<br/>
-                     seu posicionamento e <br/>
-                     ferramentas resultando <br/>
-                     em uma liderança de alta <br/>
-                     performance.
-                </p>
-            </div>
-            <div class="imgContainerSecundSection">
-                <img src="./image/02.webp" alt="Magda e Jonas" />
-            </div>
-        </div>
-
-
-        <div id="Lider">
-            <img src="./image/Lpro.webp" alt="Lider Pro logo "/>
-            <p id="pLider">
-                Liderar é mais do que comandar—é inspirar, transformar e gerar 
-                resultados sustentáveis.<br/><br/>
-
-                A Mentoria <M>LIDER PRO</M> é um programa exclusivo para líderes <br/>
-                que desejam 
-                elevar sua <br/>performance, fortalecer sua inteligência emocional, 
-                aprimorar a tomada de decisão<br/> estratégica e desenvolver uma presença 
-                executiva poderosa.
-            </p>
-        </div>
-
-        <div id="TxtImg">
-            <p id="PTXTImg">
-                O que <T>te impede</T><br/>
-                 de gerar <T>resultados<br/>
-                  reais</T> através da sua <br/><t>liderança?</t>
-            </p>
-            <div id="IMGTXT">
-                <img src="./image/txt.webp" alt="txt na imagem">
-            </div>
-        </div>
-
-
-        <div id="Magda">
-            <div class="fotoMAgda">
-                <img src="image/prima.webp" alt="foto de perfil MAgda Brito"/>
-                <p class="tituloFotoMAgda">
-                    Domínio Comportamental:
-                </p>
-                <p class="corpoFotoMagda">
-                    Como entender e se <br/>conectar com diferentes <br/>tipos de clientes para<br/> aumentar conversões.
-                </p>
-            </div>
-            <div class="fotoMAgda">
-                <img src="./image/meio.webp" alt="foto de perfil MAgda Brito"/>
-                <p class="tituloFotoMAgda">Técnicas de Vendas<br/> Estratégicas</p>
-                <p class="corpoFotoMagda">Métodos comprovados <br/>para persuasão, negociação<br/> e fechamento de alto <br/>impacto</p>
-            </div>
-            <div class="fotoMAgda">
-                <img src="image/terc.webp" alt="foto de perfil MAgda Brito"/>
-                <p class="tituloFotoMAgda">Inteligência Emocional<br/>  e Comunicação</p>
-                <p class="corpoFotoMagda">O diferencial para construir <br/>relacionamentos de longo<br/> prazo e vender com<br/> autoridade.</p>
-            </div>
-        </div>
-
-        <div id="Barra">
-            <div id="T">
-                <p id="Tp1">Tranforme sua forma de liderar</p>
-                <p id="Tp2">Aperte o botão ao lado e dê o primeiro <br/>passo para um novo resultado</p>
-            </div>
-            <img  id="BTNIMG" src="image/btn.webp" alt="btn">
-            
-            
-        </div>
-    </section>
-
-
-    <section id="palestra">
-
-    </section>
-    
-
-    <section id="final" >
-        <div id="ContainerFinal">
-            <div id="MAgdaING">
-                <img src="image/Mah.webp" alt="foto MAgda"/>
+    <!-- Secondary Section -->
+    <section id="secundSection" class="py-20">
+        <div class="container mx-auto px-4">
+            <!-- First Row -->
+            <div class="flex flex-col md:flex-row items-center mb-20 animate__animated animate__fadeIn">
+                <div class="w-full md:w-1/2 mb-10 md:mb-0">
+                    <img src="./image/01.webp" alt="Magda e Jonas" class="w-full max-w-md mx-auto floating">
+                </div>
+                <div class="w-full md:w-1/2 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-DK gold-text mb-4">Diagnóstico</h2>
+                    <p class="text-xl md:text-2xl">
+                        Comece a identificar as falhas na comunicação, processos, delegação, autoridade e baixa produtividade sua e da sua equipe através.
+                    </p>
+                </div>
             </div>
             
-            <div id="Formulario">
-                <div id="p">
-                    <p>Preencha as informações <br/>abaixo para receber o contato<br/> de nossos especialistas</p>
-
+            <!-- Second Row -->
+            <div class="flex flex-col md:flex-row items-center mb-20 animate__animated animate__fadeIn">
+                <div class="w-full md:w-1/2 order-2 md:order-1 text-center md:text-left">
+                    <h2 class="text-4xl md:text-5xl font-DK gold-text mb-4">Acelerador</h2>
+                    <p class="text-xl md:text-2xl">
+                        Construa um mapa estratégico para guiar seu posicionamento e ferramentas resultando em uma liderança de alta performance.
+                    </p>
+                </div>
+                <div class="w-full md:w-1/2 order-1 md:order-2 mb-10 md:mb-0">
+                    <img src="./image/02.webp" alt="Magda e Jonas" class="w-full max-w-md mx-auto floating">
+                </div>
+            </div>
+            
+            <!-- Lider Pro Section -->
+            <div id="Lider" class="text-center py-16 animate__animated animate__fadeIn">
+                <img src="./image/Lpro.webp" alt="Lider Pro logo" class="w-64 mx-auto mb-10 pulse">
+                <p class="text-xl md:text-2xl max-w-4xl mx-auto">
+                    Liderar é mais do que comandar—é inspirar, transformar e gerar resultados sustentáveis.<br/><br/>
+                    A Mentoria <span class="font-bold">LIDER PRO</span> é um programa exclusivo para líderes que desejam elevar sua performance, fortalecer sua inteligência emocional, aprimorar a tomada de decisão estratégica e desenvolver uma presença executiva poderosa.
+                </p>
+            </div>
+            
+            <!-- Text + Image Section -->
+            <div id="TxtImg" class="flex flex-col md:flex-row items-center py-16 animate__animated animate__fadeIn">
+                <div class="w-full md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h2 class="text-3xl md:text-4xl font-DK mb-6">
+                        O que <span class="gold-text">te impede</span> de gerar <span class="gold-text">resultados reais</span> através da sua <span class="underline-gold">liderança?</span>
+                    </h2>
+                </div>
+                <div class="w-full md:w-1/2 flex justify-center">
+                    <img src="./image/txt.webp" alt="txt na imagem" class="w-full max-w-xs floating">
+                </div>
+            </div>
+            
+            <!-- Magda Cards -->
+            <div id="Magda" class="grid grid-cols-1 md:grid-cols-3 gap-8 py-16 animate__animated animate__fadeIn">
+                <div class="foto-magda-card rounded-lg overflow-hidden text-center p-4 transition-all duration-300">
+                    <img src="image/prima.webp" alt="foto de perfil MAgda Brito" class="w-full rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-4">Domínio Comportamental:</h3>
+                    <p class="text-sm mt-2">
+                        Como entender e se conectar com diferentes tipos de clientes para aumentar conversões.
+                    </p>
                 </div>
                 
-                <input class="Y" type="text" placeholder="  Digite seu nome Completo..."/>
-
-                <div id="DVForm">
-                    <input type="tel" placeholder="  Digite seu nome Contato..."/>
-                    <input type="text" placeholder="  Digite o assunto..."/>
-
+                <div class="foto-magda-card rounded-lg overflow-hidden text-center p-4 transition-all duration-300">
+                    <img src="./image/meio.webp" alt="foto de perfil MAgda Brito" class="w-full rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-4">Técnicas de Vendas Estratégicas</h3>
+                    <p class="text-sm mt-2">
+                        Métodos comprovados para persuasão, negociação e fechamento de alto impacto
+                    </p>
                 </div>
-                <input class="Y"  type="email" placeholder="  Digite seu Melhor E-mail..."/>
-                <textarea id="mensagem" name="mensagem" rows="3" cols="30"></textarea>  
-                <button id="btnForm">Tranforme sua forma de liderar</button> 
+                
+                <div class="foto-magda-card rounded-lg overflow-hidden text-center p-4 transition-all duration-300">
+                    <img src="image/terc.webp" alt="foto de perfil MAgda Brito" class="w-full rounded-t-lg">
+                    <h3 class="text-xl font-bold mt-4">Inteligência Emocional e Comunicação</h3>
+                    <p class="text-sm mt-2">
+                        O diferencial para construir relacionamentos de longo prazo e vender com autoridade.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- CTA Bar -->
+            <div id="Barra" class="gradient-bg rounded-lg p-6 md:p-8 flex flex-col md:flex-row justify-between items-center mt-16 animate__animated animate__fadeInUp">
+                <div class="mb-4 md:mb-0">
+                    <h3 class="text-xl md:text-2xl font-bold">Transforme sua forma de liderar</h3>
+                    <p class="text-sm md:text-base">
+                        Aperte o botão ao lado e dê o primeiro passo para um novo resultado
+                    </p>
+                </div>
+                <button onclick="scrollToForm()" class="bg-white text-red-800 font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-all duration-300 pulse">
+                    Quero Transformar
+                </button>
             </div>
         </div>
-        
-        <div id="Footer">
-            <p>Developed and Copyright by <b>Cristatus Marketing Ltda</b>  | © 2025 Magda Brito | Todos os direitos reservados.</p>
+    </section>
+
+    <!-- Palestra Section -->
+    <section id="palestra" class="flex items-center justify-center">
+        <div class="text-center p-8 animate__animated animate__fadeIn">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">Palestras Transformadoras</h2>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">
+                Experiências imersivas que inspiram e capacitam líderes a alcançarem seu máximo potencial.
+            </p>
         </div>
     </section>
+
+    <!-- Final Section with Form -->
+    <section id="final" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="">
+                                
+                <div id="Formulario" class="w-full  animate__animated animate__fadeInRight">
+                    <h2 class="text-2xl md:text-3xl font-DK mb-6">
+                        Preencha as informações abaixo para receber o contato de nossos especialistas
+                    </h2>
+                    
+                    <form id="contactForm" class="space-y-4">
+                        <input type="text" id="nome" placeholder="Digite seu nome Completo..." required 
+                            class="form-input w-full p-4 rounded-md">
+                        
+                        <div class="flex flex-col md:flex-row md:space-x-4 space-y-4 md:space-y-0">
+                            <input type="tel" id="telefone" placeholder="Digite seu Contato..." required 
+                                class="form-input w-full p-4 rounded-md">
+                            <input type="text" id="assunto" placeholder="Digite o assunto..." 
+                                class="form-input w-full p-4 rounded-md">
+                        </div>
+                        
+                        <input type="email" id="email" placeholder="Digite seu Melhor E-mail..." required 
+                            class="form-input w-full p-4 rounded-md">
+                        
+                        <textarea id="mensagem" rows="4" placeholder="Sua mensagem..." 
+                            class="form-input w-full p-4 rounded-md"></textarea>
+                        
+                        <button type="submit" class="gradient-bg text-white font-bold py-3 px-6 rounded-md w-full hover:bg-opacity-90 transition-all duration-300 pulse">
+                            Transforme sua forma de liderar
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="Footer" class="gradient-bg text-center py-4 text-sm">
+        <p>Developed and Copyright by <b>Cristatus Marketing Ltda</b> | © 2025 Magda Brito | Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        // Smooth scroll to form
+        function scrollToForm() {
+            const form = document.getElementById('Formulario');
+            form.scrollIntoView({ behavior: 'smooth' });
+            
+            // Add animation class to highlight the form
+            form.classList.add('animate__pulse');
+            setTimeout(() => {
+                form.classList.remove('animate__pulse');
+            }, 1000);
+        }
+        
+        // Form submission to WhatsApp
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form values
+            const nome = document.getElementById('nome').value;
+            const telefone = document.getElementById('telefone').value;
+            const email = document.getElementById('email').value;
+            const assunto = document.getElementById('assunto').value;
+            const mensagem = document.getElementById('mensagem').value;
+            
+            // Format WhatsApp message
+            const whatsappMessage = `Olá, me chamo *${nome}*!\n\n` +
+                                   `*Contato:* ${telefone}\n` +
+                                   `*E-mail:* ${email}\n` +
+                                   `*Assunto:* ${assunto}\n\n` +
+                                   `*Mensagem:*\n${mensagem}\n\n` +
+                                   `Gostaria de mais informações sobre os programas de liderança.`;
+            
+            // Encode message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+            
+            // WhatsApp number (replace with actual number)
+            const whatsappNumber = "5514997078725"; // Example number
+            
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+            
+            // Optional: Show success message
+            alert('Formulário enviado com sucesso! Você será redirecionado para o WhatsApp.');
+            
+            // Optional: Reset form
+            this.reset();
+        });
+        
+        // Animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate__animated');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add(entry.target.dataset.animate);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
 </body>
-</html> 
+</html>
